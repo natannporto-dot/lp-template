@@ -14,29 +14,13 @@ function initializeClientConfig() {
 
   const clientName = clientConfig.companyName || "Nome da empresa";
 
-  const clientNameElement = document.querySelector("#client-name");
-  const founderNameElement = document.querySelector("#founder-name");
-  const footerNameElement = document.querySelector("#footer-name");
-  const initialsElement = document.querySelector("#client-initials");
-
-  if (clientNameElement) {
-    clientNameElement.textContent = clientName;
-  }
-
-  if (founderNameElement) {
-    founderNameElement.textContent = clientName;
-  }
-
-  if (footerNameElement) {
-    footerNameElement.textContent = clientName;
-  }
-
-  if (initialsElement) {
-    initialsElement.textContent = clientConfig.initials || "";
-  }
+  setText("#client-name", clientName);
+  setText("#founder-name", clientName);
+  setText("#footer-name", clientName);
+  setText("#client-initials", clientConfig.initials);
 
   // =========================
-  // TÍTULO E DESCRIÇÃO
+  // SEO
   // =========================
 
   if (clientConfig.pageTitle) {
@@ -65,217 +49,116 @@ function initializeClientConfig() {
   // HERO
   // =========================
 
-  const heroThesis = document.querySelector(".hero-thesis");
-  const heroSupport = document.querySelector(".hero-support");
-  const heroButton = document.querySelector(".hero-actions .primary-action");
+  setText("#hero-title", clientConfig.heroTitle);
+  setText("#hero-highlight", clientConfig.heroHighlight);
+  setText("#hero-thesis", clientConfig.heroThesis);
+  setText("#hero-support", clientConfig.heroSupport);
 
-  if (heroThesis && clientConfig.heroThesis) {
-    heroThesis.textContent = clientConfig.heroThesis;
-  }
-
-  if (heroSupport && clientConfig.heroSupport) {
-    heroSupport.textContent = clientConfig.heroSupport;
-  }
-
-  if (heroButton && clientConfig.heroButton) {
-    heroButton.textContent = clientConfig.heroButton;
-  }
+  setText("#hero-button", clientConfig.heroButton);
+  setText("#header-button", clientConfig.heroButton);
 
   // =========================
   // PROVAS
   // =========================
 
-  const proofArticles = document.querySelectorAll(".proof-grid article");
+  setText("#portrait-proof-number", clientConfig.proofNumber);
+  setText("#portrait-proof-text", clientConfig.proofText);
 
-  if (proofArticles.length >= 3) {
-    const firstTitle = proofArticles[0].querySelector("strong");
-    const firstText = proofArticles[0].querySelector("p");
+  setText("#proof-number", clientConfig.proofNumber);
+  setText("#proof-text", clientConfig.proofText);
 
-    const secondTitle = proofArticles[1].querySelector("strong");
-    const secondText = proofArticles[1].querySelector("p");
+  setText("#proof-two-title", clientConfig.proofTwoTitle);
+  setText("#proof-two-text", clientConfig.proofTwoText);
 
-    const thirdTitle = proofArticles[2].querySelector("strong");
-    const thirdText = proofArticles[2].querySelector("p");
-
-    if (firstTitle) {
-      firstTitle.textContent = clientConfig.proofNumber || "80+";
-    }
-
-    if (firstText) {
-      firstText.textContent = clientConfig.proofText || "";
-    }
-
-    if (secondTitle) {
-      secondTitle.textContent = clientConfig.proofTwoTitle || "";
-    }
-
-    if (secondText) {
-      secondText.textContent = clientConfig.proofTwoText || "";
-    }
-
-    if (thirdTitle) {
-      thirdTitle.textContent = clientConfig.proofThreeTitle || "";
-    }
-
-    if (thirdText) {
-      thirdText.textContent = clientConfig.proofThreeText || "";
-    }
-  }
+  setText("#proof-three-title", clientConfig.proofThreeTitle);
+  setText("#proof-three-text", clientConfig.proofThreeText);
 
   // =========================
   // PROBLEMA
   // =========================
 
-  const problemTitle = document.querySelector(".problem-grid h2");
-
-  const problemQuestion = document.querySelector(".problem-question p");
-
-  if (problemTitle && clientConfig.problemTitle) {
-    problemTitle.textContent = clientConfig.problemTitle;
-  }
-
-  if (problemQuestion && clientConfig.problemQuestion) {
-    problemQuestion.textContent = clientConfig.problemQuestion;
-  }
+  setText("#problem-title", clientConfig.problemTitle);
+  setText("#problem-question", clientConfig.problemQuestion);
 
   // =========================
   // DIAGNÓSTICO
   // =========================
 
-  const diagnosisTitle = document.querySelector(".diagnosis-copy h2");
-
-  const diagnosisText = document.querySelector(".diagnosis-copy > p");
-
-  const diagnosisProtect = document.querySelector(".protect-line");
-
-  if (diagnosisTitle && clientConfig.diagnosisTitle) {
-    diagnosisTitle.textContent = clientConfig.diagnosisTitle;
-  }
-
-  if (diagnosisText && clientConfig.diagnosisText) {
-    diagnosisText.textContent = clientConfig.diagnosisText;
-  }
-
-  if (diagnosisProtect && clientConfig.diagnosisProtect) {
-    diagnosisProtect.textContent = clientConfig.diagnosisProtect;
-  }
+  setText("#diagnosis-title", clientConfig.diagnosisTitle);
+  setText("#diagnosis-text", clientConfig.diagnosisText);
+  setText("#diagnosis-protect", clientConfig.diagnosisProtect);
 
   // =========================
   // PROCESSO
   // =========================
 
-  const processTitle = document.querySelector(".process-heading h2");
-
-  if (processTitle && clientConfig.processTitle) {
-    processTitle.firstChild.textContent = `${clientConfig.processTitle} `;
-  }
-
-  const processHighlight = document.querySelector(".process-heading h2 span");
-
-  if (processHighlight && clientConfig.processHighlight) {
-    processHighlight.textContent = clientConfig.processHighlight;
-  }
+  setText("#process-title", clientConfig.processTitle);
+  setText("#process-highlight", clientConfig.processHighlight);
 
   // =========================
   // SOBRE
   // =========================
 
-  const founderTitle = document.querySelector(".founder-statement h2");
+  setText("#founder-title", clientConfig.founderTitle);
 
-  const founderCopy = document.querySelectorAll(".founder-copy p");
-
-  const founderQuote = document.querySelector(".founder-copy blockquote");
-
-  if (founderTitle && clientConfig.founderTitle) {
-    founderTitle.textContent = clientConfig.founderTitle;
-  }
-
-  if (founderCopy.length >= 3) {
-    if (founderCopy[0] && clientConfig.founderText) {
-      founderCopy[0].textContent = clientConfig.founderText;
-    }
-
-    if (founderCopy[1] && clientConfig.founderTextTwo) {
-      founderCopy[1].textContent = clientConfig.founderTextTwo;
-    }
-
-    if (founderCopy[2] && clientConfig.founderTextThree) {
-      founderCopy[2].textContent = clientConfig.founderTextThree;
-    }
-  }
-
-  if (founderQuote && clientConfig.founderQuote) {
-    founderQuote.textContent = clientConfig.founderQuote;
-  }
+  setText("#founder-text", clientConfig.founderText);
+  setText("#founder-text-two", clientConfig.founderTextTwo);
+  setText("#founder-quote", clientConfig.founderQuote);
+  setText("#founder-text-three", clientConfig.founderTextThree);
 
   // =========================
   // OBJEÇÃO
   // =========================
 
-  const objectionQuote = document.querySelector(".objection-quote");
-
-  const objectionTitle = document.querySelector(".objection-answer h2");
-
-  const objectionText = document.querySelector(".objection-answer p");
-
-  const objectionButton = document.querySelector(
-    ".objection-answer .text-action",
-  );
-
-  if (objectionQuote && clientConfig.objectionQuote) {
-    objectionQuote.textContent = clientConfig.objectionQuote;
-  }
-
-  if (objectionTitle && clientConfig.objectionTitle) {
-    objectionTitle.textContent = clientConfig.objectionTitle;
-  }
-
-  if (objectionText && clientConfig.objectionText) {
-    objectionText.textContent = clientConfig.objectionText;
-  }
-
-  if (objectionButton && clientConfig.objectionButton) {
-    objectionButton.textContent = clientConfig.objectionButton;
-  }
+  setText("#objection-quote", clientConfig.objectionQuote);
+  setText("#objection-title", clientConfig.objectionTitle);
+  setText("#objection-text", clientConfig.objectionText);
+  setText("#objection-button", clientConfig.objectionButton);
 
   // =========================
   // FORMULÁRIO
   // =========================
 
-  const formTitle = document.querySelector(".form-intro h2");
-
-  const formDescription = document.querySelector(".form-intro p");
-
-  const formButton = document.querySelector(".form-action");
+  setText("#form-title", clientConfig.formTitle);
+  setText("#form-description", clientConfig.formDescription);
+  setText("#form-button", clientConfig.formButton);
 
   const formNote = document.querySelector("#form-note");
 
-  if (formTitle && clientConfig.formTitle) {
-    formTitle.textContent = clientConfig.formTitle;
-  }
+  if (formNote) {
+    if (clientConfig.formNote) {
+      formNote.textContent = clientConfig.formNote;
+    }
 
-  if (formDescription && clientConfig.formDescription) {
-    formDescription.textContent = clientConfig.formDescription;
-  }
-
-  if (formButton && clientConfig.formButton) {
-    formButton.textContent = clientConfig.formButton;
-  }
-
-  if (formNote && clientConfig.companyName) {
-    formNote.textContent = `Ao continuar, suas respostas serão abertas em uma conversa com o WhatsApp oficial de ${clientConfig.companyName}.`;
+    if (clientConfig.companyName) {
+      formNote.textContent = `Ao continuar, suas respostas serão abertas em uma conversa com o WhatsApp oficial de ${clientConfig.companyName}.`;
+    }
   }
 
   // =========================
-  // FOOTER
+  // RODAPÉ
   // =========================
 
-  const footerDescription = document.querySelector("#footer-description");
+  setText("#footer-description", clientConfig.footerDescription);
+}
 
-  if (footerDescription && clientConfig.footerDescription) {
-    footerDescription.textContent = clientConfig.footerDescription;
+// =========================
+// FUNÇÃO AUXILIAR
+// =========================
+
+function setText(selector, value) {
+  if (!value) return;
+
+  const element = document.querySelector(selector);
+
+  if (element) {
+    element.textContent = value;
   }
 }
+
+// =========================
+// ANIMAÇÕES
+// =========================
 
 function initializeRevealAnimations() {
   const elements = document.querySelectorAll("[data-reveal]");
@@ -311,6 +194,10 @@ function initializeRevealAnimations() {
   });
 }
 
+// =========================
+// INTERAÇÃO DA FOTO
+// =========================
+
 function initializePortraitInteraction() {
   const portrait = document.querySelector(".portrait-stage");
 
@@ -338,6 +225,10 @@ function initializePortraitInteraction() {
     portrait.style.setProperty("--shift-y", "0px");
   });
 }
+
+// =========================
+// FORMULÁRIO
+// =========================
 
 function initializeForm() {
   const form = document.querySelector(".diagnosis-form");
@@ -377,9 +268,11 @@ function initializeForm() {
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
+
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify({
           name,
           company,
