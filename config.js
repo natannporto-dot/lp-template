@@ -143,13 +143,14 @@ const clientConfig = {
   footerDescription: "Diagnóstico, aquisição e conversão para SaaS B2B.",
 
   // =========================
-  // CORES
+  // CORES CONFIGURÁVEIS
   // =========================
 
   colors: {
-    primary: "#111111",
-    background: "#f7f7f3",
-    text: "#111111",
-    muted: "#777777",
+    paper: "#f7f7f3",
+    ink: "#0b0d12",
+    navy: "#0f0c43",
+    blue: "#ed1520",
+    white: "#ffffff",
   },
 };

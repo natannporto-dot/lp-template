@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeForm();
 });
 
+// =========================
+// CONFIGURAÇÃO DO CLIENTE
+// =========================
+
 function initializeClientConfig() {
   if (typeof clientConfig === "undefined") return;
 
@@ -36,6 +40,12 @@ function initializeClientConfig() {
   }
 
   // =========================
+  // CORES
+  // =========================
+
+  initializeColors();
+
+  // =========================
   // FOTO
   // =========================
 
@@ -44,6 +54,12 @@ function initializeClientConfig() {
   if (portrait && clientConfig.photo) {
     portrait.style.backgroundImage = `url("${clientConfig.photo}")`;
   }
+
+  // =========================
+  // INSTAGRAM
+  // =========================
+
+  initializeSocialLinks();
 
   // =========================
   // HERO
@@ -62,15 +78,18 @@ function initializeClientConfig() {
   // =========================
 
   setText("#portrait-proof-number", clientConfig.proofNumber);
+
   setText("#portrait-proof-text", clientConfig.proofText);
 
   setText("#proof-number", clientConfig.proofNumber);
   setText("#proof-text", clientConfig.proofText);
 
   setText("#proof-two-title", clientConfig.proofTwoTitle);
+
   setText("#proof-two-text", clientConfig.proofTwoText);
 
   setText("#proof-three-title", clientConfig.proofThreeTitle);
+
   setText("#proof-three-text", clientConfig.proofThreeText);
 
   // =========================
@@ -78,6 +97,7 @@ function initializeClientConfig() {
   // =========================
 
   setText("#problem-title", clientConfig.problemTitle);
+
   setText("#problem-question", clientConfig.problemQuestion);
 
   // =========================
@@ -85,7 +105,9 @@ function initializeClientConfig() {
   // =========================
 
   setText("#diagnosis-title", clientConfig.diagnosisTitle);
+
   setText("#diagnosis-text", clientConfig.diagnosisText);
+
   setText("#diagnosis-protect", clientConfig.diagnosisProtect);
 
   // =========================
@@ -93,6 +115,7 @@ function initializeClientConfig() {
   // =========================
 
   setText("#process-title", clientConfig.processTitle);
+
   setText("#process-highlight", clientConfig.processHighlight);
 
   // =========================
@@ -102,8 +125,11 @@ function initializeClientConfig() {
   setText("#founder-title", clientConfig.founderTitle);
 
   setText("#founder-text", clientConfig.founderText);
+
   setText("#founder-text-two", clientConfig.founderTextTwo);
+
   setText("#founder-quote", clientConfig.founderQuote);
+
   setText("#founder-text-three", clientConfig.founderTextThree);
 
   // =========================
@@ -111,8 +137,11 @@ function initializeClientConfig() {
   // =========================
 
   setText("#objection-quote", clientConfig.objectionQuote);
+
   setText("#objection-title", clientConfig.objectionTitle);
+
   setText("#objection-text", clientConfig.objectionText);
+
   setText("#objection-button", clientConfig.objectionButton);
 
   // =========================
@@ -120,7 +149,9 @@ function initializeClientConfig() {
   // =========================
 
   setText("#form-title", clientConfig.formTitle);
+
   setText("#form-description", clientConfig.formDescription);
+
   setText("#form-button", clientConfig.formButton);
 
   const formNote = document.querySelector("#form-note");
@@ -140,6 +171,76 @@ function initializeClientConfig() {
   // =========================
 
   setText("#footer-description", clientConfig.footerDescription);
+}
+
+// =========================
+// LINKS SOCIAIS
+// =========================
+
+function initializeSocialLinks() {
+  if (typeof clientConfig === "undefined") return;
+
+  const instagramLinks = document.querySelectorAll(
+    "#instagram-link, [data-social='instagram']",
+  );
+
+  instagramLinks.forEach((link) => {
+    if (!clientConfig.instagram) return;
+
+    link.href = clientConfig.instagram;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+}
+
+// =========================
+// CORES CONFIGURÁVEIS
+// =========================
+
+function initializeColors() {
+  if (typeof clientConfig === "undefined" || !clientConfig.colors) {
+    return;
+  }
+
+  const root = document.documentElement;
+  const colors = clientConfig.colors;
+
+  if (colors.paper) {
+    root.style.setProperty("--paper", colors.paper);
+  }
+
+  if (colors.ink) {
+    root.style.setProperty("--ink", colors.ink);
+  }
+
+  if (colors.navy) {
+    root.style.setProperty("--navy", colors.navy);
+  }
+
+  if (colors.blue) {
+    root.style.setProperty("--blue", colors.blue);
+  }
+
+  if (colors.white) {
+    root.style.setProperty("--white", colors.white);
+  }
+
+  // Compatibilidade com a configuração atual
+  if (colors.primary) {
+    root.style.setProperty("--color-primary", colors.primary);
+  }
+
+  if (colors.background) {
+    root.style.setProperty("--color-background", colors.background);
+  }
+
+  if (colors.text) {
+    root.style.setProperty("--color-text", colors.text);
+  }
+
+  if (colors.muted) {
+    root.style.setProperty("--color-muted", colors.muted);
+  }
 }
 
 // =========================

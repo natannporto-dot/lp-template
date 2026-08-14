@@ -30,55 +30,83 @@
 <body>
 
   <header class="site-header">
+
     <a class="identity" href="#inicio" aria-label="Operação personalizada — início">
       <span class="identity-rule" aria-hidden="true"></span>
       <span>Operação personalizada</span>
     </a>
 
-    <a class="header-action" href="#diagnostico">
+    <a class="header-action" id="header-button" href="#diagnostico">
       Analisar minha operação
     </a>
+
   </header>
+
 
   <main>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero" id="inicio">
+
       <div class="hero-grid page-shell">
 
         <div class="hero-copy">
 
           <h1 data-reveal>
-            Seu SaaS não precisa de uma agência de <span>R$ 10 mil.</span>
+
+            <span id="hero-title">
+              Seu SaaS não precisa de uma agência de
+            </span>
+
+            <span id="hero-highlight">
+              R$ 10 mil.
+            </span>
+
           </h1>
 
-          <p class="hero-thesis" data-reveal>
+
+          <p class="hero-thesis" id="hero-thesis" data-reveal>
             Precisa de alguém que entenda o momento da operação e ataque o
             problema certo.
           </p>
 
-          <p class="hero-support" data-reveal>
+
+          <p class="hero-support" id="hero-support" data-reveal>
             Acompanho operações de SaaS de perto para identificar o gargalo
             atual e definir a entrega que realmente faz sentido.
           </p>
 
+
           <div class="hero-actions" data-reveal>
-            <a class="primary-action" href="#diagnostico">
+
+            <a class="primary-action" id="hero-button" href="#diagnostico">
               Analisar minha operação
             </a>
+
           </div>
 
         </div>
 
-        <div class="portrait-stage" aria-label="Vinícius Marcelino, especialista em operações de SaaS" data-reveal>
+
+        <!-- =========================
+             FOTO
+        ========================== -->
+
+        <div class="portrait-stage" id="portrait-stage" aria-label="Especialista em operações" data-reveal>
 
           <div class="portrait-fallback" aria-hidden="true">
             <span id="client-initials">VM</span>
           </div>
 
+
           <div class="portrait-photo-layer" aria-hidden="true"></div>
 
+
           <div class="portrait-light" aria-hidden="true"></div>
+
 
           <div class="portrait-index" aria-hidden="true">
             <span>DIAGNÓSTICO</span>
@@ -86,57 +114,109 @@
             <span>EXECUÇÃO</span>
           </div>
 
+
           <div class="portrait-proof">
-            <strong>80+</strong>
-            <span>operações de SaaS acompanhadas</span>
+
+            <strong id="portrait-proof-number">
+              80+
+            </strong>
+
+            <span id="portrait-proof-text">
+              operações de SaaS acompanhadas
+            </span>
+
           </div>
 
+
           <div class="portrait-caption">
-            <span id="client-name">Vinícius Marcelino</span>
-            <span>Participação direta</span>
+
+            <span id="client-name">
+              Vinícius Marcelino
+            </span>
+
+            <span>
+              Participação direta
+            </span>
+
           </div>
 
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- PROVAS -->
+    <!-- =========================
+         PROVAS
+    ========================== -->
+
     <section class="proof-band" aria-label="Provas rápidas">
 
       <div class="proof-grid page-shell">
 
-        <article data-reveal>
-          <strong>80+</strong>
-          <p>operações de SaaS acompanhadas</p>
-        </article>
 
         <article data-reveal>
-          <strong>1 gargalo</strong>
-          <p>por vez, sem inflar o escopo</p>
+
+          <strong id="proof-number">
+            80+
+          </strong>
+
+          <p id="proof-text">
+            operações de SaaS acompanhadas
+          </p>
+
         </article>
 
+
         <article data-reveal>
-          <strong>Direto comigo</strong>
-          <p>no diagnóstico e nas decisões</p>
+
+          <strong id="proof-two-title">
+            1 gargalo
+          </strong>
+
+          <p id="proof-two-text">
+            por vez, sem inflar o escopo
+          </p>
+
         </article>
+
+
+        <article data-reveal>
+
+          <strong id="proof-three-title">
+            Direto comigo
+          </strong>
+
+          <p id="proof-three-text">
+            no diagnóstico e nas decisões
+          </p>
+
+        </article>
+
 
       </div>
 
     </section>
 
 
-    <!-- PROBLEMA -->
+    <!-- =========================
+         PROBLEMA
+    ========================== -->
+
     <section class="problem-section section-space" id="problema">
 
       <div class="page-shell problem-grid">
 
+
         <div data-reveal>
-          <h2>
+
+          <h2 id="problem-title">
             Comprar mais serviço não significa resolver mais problemas.
           </h2>
+
         </div>
+
 
         <div class="problem-body" data-reveal>
 
@@ -148,7 +228,11 @@
             <span>Treinamento</span>
           </div>
 
-          <p>Tudo isso pode ser importante.</p>
+
+          <p>
+            Tudo isso pode ser importante.
+          </p>
+
 
           <p class="not-now">
             Mas não necessariamente agora.
@@ -158,65 +242,109 @@
 
       </div>
 
+
       <div class="page-shell problem-question" data-reveal>
-        <p>Onde seu SaaS realmente está travando?</p>
+
+        <p id="problem-question">
+          Onde sua operação realmente está travando?
+        </p>
+
       </div>
 
     </section>
 
 
-    <!-- DIAGNÓSTICO -->
+    <!-- =========================
+         DIAGNÓSTICO
+    ========================== -->
+
     <section class="diagnosis-section section-space">
 
       <div class="diagnosis-orbit" aria-hidden="true"></div>
 
+
       <div class="page-shell diagnosis-layout">
+
 
         <div class="diagnosis-copy" data-reveal>
 
-          <h2>
+          <h2 id="diagnosis-title">
             Primeiro o diagnóstico. Depois a entrega.
           </h2>
 
-          <p>
+
+          <p id="diagnosis-text">
             Se o problema está na aquisição, trabalhamos aquisição. Se a
             demanda existe, mas não converte, olhamos para o comercial.
           </p>
 
-          <p class="protect-line">
+
+          <p class="protect-line" id="diagnosis-protect">
             Se algo já funciona, não mexemos.
           </p>
 
         </div>
 
+
         <div class="diagnosis-map" data-reveal>
 
+
           <article>
+
             <span class="map-dot" aria-hidden="true"></span>
 
             <div>
-              <p>Demanda insuficiente</p>
-              <strong>Aquisição entra no foco.</strong>
+
+              <p>
+                Demanda insuficiente
+              </p>
+
+              <strong>
+                Aquisição entra no foco.
+              </strong>
+
             </div>
+
           </article>
 
+
           <article>
+
             <span class="map-dot" aria-hidden="true"></span>
 
             <div>
-              <p>Leads chegam, mas não avançam</p>
-              <strong>Conversão entra no foco.</strong>
+
+              <p>
+                Leads chegam, mas não avançam
+              </p>
+
+              <strong>
+                Conversão entra no foco.
+              </strong>
+
             </div>
+
           </article>
 
+
           <article>
+
             <span class="map-dot map-dot-hollow" aria-hidden="true"></span>
 
             <div>
-              <p>Uma parte já performa</p>
-              <strong>O que funciona é preservado.</strong>
+
+              <p>
+                Uma parte já performa
+              </p>
+
+              <strong>
+                O que funciona é preservado.
+              </strong>
+
             </div>
+
           </article>
+
 
         </div>
 
@@ -225,48 +353,76 @@
     </section>
 
 
-    <!-- PROCESSO -->
+    <!-- =========================
+         PROCESSO
+    ========================== -->
+
     <section class="process-section section-space" id="processo">
 
       <div class="page-shell">
 
+
         <div class="process-heading" data-reveal>
 
           <h2>
-            Sua operação define o que precisa ser feito.
-            <span>Não um pacote pronto.</span>
+
+            <span id="process-title">
+              Sua operação define o que precisa ser feito.
+            </span>
+
+            <span id="process-highlight">
+              Não um pacote pronto.
+            </span>
+
           </h2>
 
         </div>
 
+
         <div class="process-steps">
 
+
           <article data-reveal>
-            <h3>Ler a operação</h3>
+
+            <h3>
+              Ler a operação
+            </h3>
 
             <p>
               Entender aquisição, funil, rotina comercial e o momento real do
               SaaS.
             </p>
+
           </article>
 
+
           <article data-reveal>
-            <h3>Isolar o gargalo</h3>
+
+            <h3>
+              Isolar o gargalo
+            </h3>
 
             <p>
               Separar sintomas do problema que de fato está limitando o
               crescimento.
             </p>
+
           </article>
 
+
           <article data-reveal>
-            <h3>Atacar o ponto certo</h3>
+
+            <h3>
+              Atacar o ponto certo
+            </h3>
 
             <p>
               Definir uma entrega objetiva, com prioridade e critério de
               avanço.
             </p>
+
           </article>
+
 
         </div>
 
@@ -275,10 +431,14 @@
     </section>
 
 
-    <!-- RESULTADOS -->
+    <!-- =========================
+         RESULTADOS
+    ========================== -->
+
     <section class="outcomes-section section-space" id="resultados">
 
       <div class="page-shell outcomes-grid">
+
 
         <div class="outcomes-heading" data-reveal>
 
@@ -288,31 +448,45 @@
 
         </div>
 
+
         <div class="outcomes-list">
 
+
           <article data-reveal>
+
             <p>
               Você entende onde o crescimento está perdendo força.
             </p>
+
           </article>
 
+
           <article data-reveal>
+
             <p>
               O investimento deixa de ser pulverizado entre várias apostas.
             </p>
+
           </article>
 
+
           <article data-reveal>
+
             <p>
               A entrega acompanha o momento da operação, não um cardápio.
             </p>
+
           </article>
 
+
           <article data-reveal>
+
             <p>
               As decisões importantes têm participação sênior e contexto.
             </p>
+
           </article>
+
 
         </div>
 
@@ -321,18 +495,24 @@
     </section>
 
 
-    <!-- SOBRE -->
+    <!-- =========================
+         SOBRE
+    ========================== -->
+
     <section class="founder-section section-space" id="sobre">
 
       <div class="page-shell founder-grid">
 
+
         <div class="founder-statement" data-reveal>
 
-          <h2>
+          <h2 id="founder-title">
             Menos projetos. Mais participação.
           </h2>
 
+
           <div class="founder-rule" aria-hidden="true"></div>
+
 
           <p class="founder-signature" id="founder-name">
             Vinícius Marcelino
@@ -340,24 +520,28 @@
 
         </div>
 
+
         <div class="founder-copy" data-reveal>
 
-          <p>
+          <p id="founder-text">
             Passei pelo comercial, produto e acompanhei mais de
             <strong>80 operações de SaaS</strong>.
           </p>
 
-          <p>
+
+          <p id="founder-text-two">
             Hoje escolhi trabalhar com uma carteira menor para participar
             diretamente dos projetos.
           </p>
 
-          <blockquote>
+
+          <blockquote id="founder-quote">
             Você não contrata minha experiência para ser atendido apenas por
             um time júnior.
           </blockquote>
 
-          <p>
+
+          <p id="founder-text-three">
             O diagnóstico, o acompanhamento e as decisões passam diretamente
             por mim.
           </p>
@@ -369,30 +553,39 @@
     </section>
 
 
-    <!-- OBJEÇÃO -->
+    <!-- =========================
+         OBJEÇÃO
+    ========================== -->
+
     <section class="objection-section section-space" id="objecao">
 
       <div class="page-shell objection-grid">
 
+
         <div data-reveal>
-          <p class="objection-quote">
+
+          <p class="objection-quote" id="objection-quote">
             “Não sei onde está o gargalo.”
           </p>
+
         </div>
+
 
         <div class="objection-answer" data-reveal>
 
-          <h2>
+          <h2 id="objection-title">
             Você não precisa chegar com o diagnóstico pronto.
           </h2>
 
-          <p>
+
+          <p id="objection-text">
             Essa é justamente a primeira parte do trabalho: olhar para o
             momento da operação, identificar o problema prioritário e dizer
             com clareza o que vale — e o que não vale — fazer agora.
           </p>
 
-          <a class="text-action" href="#diagnostico">
+
+          <a class="text-action" id="objection-button" href="#diagnostico">
             Quero entender minha operação
           </a>
 
@@ -403,25 +596,32 @@
     </section>
 
 
-    <!-- FORMULÁRIO -->
+    <!-- =========================
+         FORMULÁRIO
+    ========================== -->
+
     <section class="form-section section-space" id="diagnostico">
 
       <div class="page-shell form-layout">
 
+
         <div class="form-intro" data-reveal>
 
-          <h2>
-            Vamos entender o que seu SaaS precisa agora.
+          <h2 id="form-title">
+            Vamos entender o que sua empresa precisa agora.
           </h2>
 
-          <p>
+
+          <p id="form-description">
             Preencha o formulário e me conte onde sua operação está hoje.
             Suas respostas já chegam organizadas para a primeira conversa.
           </p>
 
         </div>
 
+
         <form class="diagnosis-form" data-reveal>
+
 
           <div class="field-row">
 
@@ -462,6 +662,7 @@
               Principal desafio
             </label>
 
+
             <div class="select-wrap">
 
               <select id="challenge" name="challenge" required>
@@ -470,27 +671,33 @@
                   Selecione uma opção
                 </option>
 
+
                 <option value="Gerar demanda">
                   Gerar demanda
                 </option>
+
 
                 <option value="Melhorar a qualidade dos leads">
                   Melhorar a qualidade dos leads
                 </option>
 
+
                 <option value="Melhorar a conversão">
                   Melhorar a conversão
                 </option>
 
+
                 <option value="Estruturar o comercial">
                   Estruturar o comercial
                 </option>
+
 
                 <option value="Não sei onde está o gargalo">
                   Não sei onde está o gargalo
                 </option>
 
               </select>
+
 
               <span aria-hidden="true">
                 ⌄
@@ -501,16 +708,19 @@
           </div>
 
 
-          <button type="submit" class="primary-action form-action">
+          <button type="submit" class="primary-action form-action" id="form-button">
             Analisar minha operação
           </button>
+
 
           <p class="form-note" id="form-note">
             Ao continuar, suas respostas serão abertas em uma conversa com o
             WhatsApp oficial.
           </p>
 
+
           <p class="form-status" aria-live="polite"></p>
+
 
         </form>
 
@@ -521,7 +731,10 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
 
     <div class="page-shell footer-grid">
@@ -534,6 +747,10 @@
         Diagnóstico, aquisição e conversão para SaaS B2B.
       </p>
 
+      <a id="instagram-link" href="#" aria-label="Instagram de Vinícius Marcelino">
+        Instagram
+      </a>
+
       <a href="#inicio">
         Voltar ao início
       </a>
@@ -541,73 +758,6 @@
     </div>
 
   </footer>
-
-
-  <!-- CONFIGURAÇÃO DO CLIENTE -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      if (typeof clientConfig === "undefined") {
-        return;
-      }
-
-      const clientName =
-        clientConfig.companyName || "Vinícius Marcelino";
-
-      const clientNameElement =
-        document.querySelector("#client-name");
-
-      const founderNameElement =
-        document.querySelector("#founder-name");
-
-      const footerNameElement =
-        document.querySelector("#footer-name");
-
-      const formNote =
-        document.querySelector("#form-note");
-
-
-      if (clientNameElement) {
-        clientNameElement.textContent = clientName;
-      }
-
-
-      if (founderNameElement) {
-        founderNameElement.textContent = clientName;
-      }
-
-
-      if (footerNameElement) {
-        footerNameElement.textContent = clientName;
-      }
-
-
-      if (clientConfig.companyDescription) {
-
-        const footerDescription =
-          document.querySelector("#footer-description");
-
-        if (footerDescription) {
-          footerDescription.textContent =
-            clientConfig.companyDescription;
-        }
-
-      }
-
-
-      if (formNote && clientConfig.companyName) {
-
-        formNote.textContent =
-          `Ao continuar, suas respostas serão abertas em uma conversa com o WhatsApp oficial de ${clientConfig.companyName}.`;
-
-      }
-
-
-      document.title =
-        `${clientName} — Diagnóstico para SaaS`;
-
-    });
-  </script>
 
 </body>
 
